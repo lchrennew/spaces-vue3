@@ -3,6 +3,7 @@ import RawSpaceLoader from "./src/components/RawSpaceLoader.vue";
 import SpacesProvider from "./src/components/SpacesProvider.vue";
 import SpaceSwitcher from "./src/components/SpaceSwitcher.vue";
 import SpacesPicker from "./src/components/SpacesPicker.vue";
+import SpaceCorrector from "./src/components/SpaceCorrector.vue";
 
 export {
     resetSpaces,
@@ -10,4 +11,5 @@ export {
     SpacesProvider,
     SpaceSwitcher,
     SpacesPicker,
+    SpaceCorrector,
 }
