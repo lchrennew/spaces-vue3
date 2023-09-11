@@ -9,13 +9,13 @@ import { lastVisitedModule, lastVisitedSolution, load, spaces, spacesConsumer } 
 import { useRoute } from "vue-router";
 
 const props = defineProps({
-    consumer: { type: String, required: true },
-    getMine: { type: Function, required: true },
+    consumer: { type: String, required: true, },
+    getMine: { type: Function, required: true, },
 })
 
 const spacesLoaded = computed(() => {
     const loaded = !!spaces.value && spacesConsumer.value === props.consumer
-    !loaded && nextTick(() => load(props.getMine, props.consumer ))
+    !loaded && nextTick(() => load(props.getMine))
     return loaded
 })
 const hasSpace = computed(() => !!spaces.value?.[0]?.children?.[0])
@@ -47,3 +47,7 @@ const defaultSpace = computed(() => {
 })
 provide('defaultSpace', computed(() => defaultSpace.value))
 </script>
+
+<style scoped>
+
+</style>

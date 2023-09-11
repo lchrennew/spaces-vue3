@@ -1,10 +1,11 @@
 <script setup>
+
 import DataLoader from "data-loader-vue3/src/DataLoader.vue";
 import RawSpaceProvider from "./RawSpaceProvider.vue";
 
 defineProps({
-    path: { required: true, type: String },
-    getRawSpace: { required: true, type: Function },
+    path: { required: true, type: String, },
+    getRawSpace: { type: Function, required: true }
 })
 </script>
 

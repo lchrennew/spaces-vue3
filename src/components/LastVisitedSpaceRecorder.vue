@@ -1,7 +1,27 @@
-<script setup>
+<script>
 import { visit } from '../states/spaces.js';
-import { watchEffect } from "vue";
 
-const props = defineProps({ solution: String, module: String })
-watchEffect(() => visit(props.solution, props.module))
+export default {
+    name: 'LastVisitedSpaceRecorder',
+    props: [ 'solution', 'module' ],
+    computed: {
+        space() {
+            return { solution: this.solution, module: this.module }
+        }
+    },
+    watch: {
+        space: {
+            handler({ solution, module }) {
+                visit(solution, module)
+            },
+            immediate: true
+        }
+    },
+    render() {
+    }
+}
 </script>
+
+<style scoped>
+
+</style>

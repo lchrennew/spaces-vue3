@@ -1,5 +1,5 @@
 <template>
-    <spaces-provider #="{defaultSpace, changeable, specifiedSpace, inSpace}" v-bind="{ consumer, getMine }">
+    <spaces-provider #="{defaultSpace, changeable, specifiedSpace, inSpace}" :consumer="consumer" :get-mine="getMine">
         <spaces-picker
             v-if="changeable && specifiedSpace"
             :allow-clear="false"
@@ -18,16 +18,15 @@
 import LastVisitedSpaceRecorder from './LastVisitedSpaceRecorder.vue';
 import SpacesProvider from './SpacesProvider.vue';
 import SpacesPicker from "./SpacesPicker.vue";
-import { spaces } from '../states/spaces.js';
+import { spaces } from '../../states/spaces.js';
 import { computed } from "vue";
 import { useRoute, useRouter } from "vue-router";
 
 const props = defineProps({
-    container: { type: String, default: 'pippy' },
-    consumer: { type: String, required: true },
+    container: { type: String, required: true },
     getMine: { type: Function, required: true },
+    consumer: { type: String, required: true },
 })
-
 const route = useRoute()
 const navValue = computed(() => {
     const { solution, module } = route.params
