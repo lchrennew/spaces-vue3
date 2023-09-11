@@ -1,6 +1,6 @@
 {
   "name": "spaces-vue3",
-  "private": true,
+  "private": false,
   "version": "0.0.0",
   "type": "module",
   "main": "index.js",
