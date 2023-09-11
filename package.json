@@ -1,0 +1,29 @@
+{
+  "name": "spaces-vue3",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "main": "index.js",
+  "files": [
+    "src/components",
+    "src/states",
+    "vite.config.js"
+  ],
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "ant-design-vue": "^4.0.3",
+    "context-vue3": "^0.0.3",
+    "data-loader-vue3": "^0.0.8",
+    "pinyin-match": "^1.2.4",
+    "vue": "^3.3.4",
+    "vue-router": "^4.2.4"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^4.3.4",
+    "vite": "^4.4.9"
+  }
+}
