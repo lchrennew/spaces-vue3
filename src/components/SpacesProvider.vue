@@ -15,7 +15,7 @@ const props = defineProps({
 
 const spacesLoaded = computed(() => {
     const loaded = !!spaces.value && spacesConsumer.value === props.consumer
-    !loaded && nextTick(() => load(props.getMine))
+    !loaded && nextTick(() => load(props.getMine, props.consumer))
     return loaded
 })
 const hasSpace = computed(() => !!spaces.value?.[0]?.children?.[0])

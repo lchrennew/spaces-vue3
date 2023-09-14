@@ -18,7 +18,7 @@
 import LastVisitedSpaceRecorder from './LastVisitedSpaceRecorder.vue';
 import SpacesProvider from './SpacesProvider.vue';
 import SpacesPicker from "./SpacesPicker.vue";
-import { spaces } from '../../states/spaces.js';
+import { spaces } from '../states/spaces.js';
 import { computed } from "vue";
 import { useRoute, useRouter } from "vue-router";
 
