@@ -36,11 +36,9 @@ const navValue = computed(() => {
 const navSolution = computed(() => navValue.value[0])
 const navModule = computed(() => navValue.value[1])
 
-const router = useRouter()
-const onChange = (value, [ { value: solution }, { value: module } ]) => {
-    const [ l1, l2 ] = route.name.split(':')
-    router.push({ name: `${ l1 }:${ l2 }`, params: { solution, module } })
-}
+const emit = defineEmits([ 'change' ])
+const onChange = (value, [ { value: solution }, { value: module } ]) =>
+    emit('change', { solution, module })
 const getPopupContainer = () => document.getElementById(props.container)
 </script>
 
